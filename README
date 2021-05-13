@@ -1,0 +1,24 @@
+>Instructions to run the program:-
+	run the program in the terminal by typing the following command while in the directory where the program file is saved:-
+		"socketChat.py {your public ip,(default 127.0.0.1)} {port number, (any port no. > 1024 upto 49151)}"	
+	example:
+		For starting the server
+		on linux, mac:-
+		~$ python3 socketChat.py 127.0.0.1 1234
+		
+		on Windows:-
+		~$ sokcetChat.py 127.0.0.1 1234
+		 
+
+>Program Description
+The program creates a server using socket programming in python to which any client can connect using netcat.
+Multiple clients can connect to the server and send messages to it which the server sends to all other clients
+Hence, it can be used a message broadcasting chat room. 
+This program uses socke programming module "socket" for hosting and managing server and client sockets, threading module "threading" for maintaining different concurrent client sockets, and system module "sys" to take command line arguments
+
+>Challenges faced and how they were addressed
+	>finding which ip address and port
+		solution: reading and getting to know more about the different IPs and available ports a system maintains 
+	>maintaining multiple concurrent clients, sending message from one
+		solution: using threading we can manage multiple client sockets as different threads
+
